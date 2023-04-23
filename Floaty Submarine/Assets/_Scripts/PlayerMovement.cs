@@ -27,5 +27,6 @@ public class PlayerMovement : MonoBehaviour
     public void Rotate(int direction)
     {
         rb.AddTorque(0, direction*_torque * Time.deltaTime, 0, ForceMode.Impulse); 
+        rb.AddRelativeForce(Vector3.forward * _forceToAdd/5 * Time.deltaTime); 
     }
 }
